@@ -10,10 +10,6 @@ import { DataService } from '../../services/index.service';
 export class CandidateInfoComponent {
   constructor(private dataService: DataService) { }
   ngOnInit() {
-    this.dataService.fetchData()
-    .subscribe((data:any) => {
-      console.log(data)
-    })
   }
   
 formGroup = new FormGroup(
@@ -30,6 +26,10 @@ formGroup = new FormGroup(
     if (!email) {
      return alert("Please enter a valid email !");
     }
-    console.log({email, name})
+    this.dataService.createUser({ email, name })
+      .subscribe((data: any) => {
+      localStorage.setItem("userInfo",JSON.stringify(data))
+      window.location.href = `${window.location.origin}/test`;
+    })
   }
 }
