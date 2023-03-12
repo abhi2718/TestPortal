@@ -1,0 +1,25 @@
+.conatiner{
+    padding: 16px;
+}
+.conatiner h2 {
+    text-align: center;
+    margin-bottom: 16px;
+}
+.conatiner button{
+    margin-top: 16px;
+    border:1px solid blue;
+    background-color: blue;
+    color: aqua;
+    padding: 0 10px;
+    border-radius: 10px;
+}
+.questionConatiner{
+    margin-top:20px;
+}
+.userInfo{
+    width: 300px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

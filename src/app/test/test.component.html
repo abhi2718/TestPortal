@@ -1,0 +1,27 @@
+<div class="conatiner">
+    <h2>Test Portal</h2>
+  <div class="card userInfo">
+    <h6>Name : Abhishek Singh</h6>
+    <h6>Email : abhiwebdev2718@gmail.com</h6>
+  </div>
+  <div class="questionConatiner">
+    <div>
+      <div>
+        <h6>Q{{ currentQuestion._id }} {{ currentQuestion.question }}</h6>
+        <div *ngFor="let opt of currentQuestion.option">
+          <label>
+            <input
+              type="radio"
+              name="myRadioGroup"
+              value="{{ opt }}"
+              (click)="onRadioClick(currentQuestion,opt)"
+            />
+            {{ opt }}
+          </label>
+        </div>
+        <button *ngIf="i<4" type="button" (click)="setNextQuestion()">Next</button>
+        <button *ngIf="i===4" type="button" (click)="handleSubmit()">Submit</button>
+      </div>
+    </div>
+  </div>
+</div>

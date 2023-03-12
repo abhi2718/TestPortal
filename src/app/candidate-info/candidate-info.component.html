@@ -1,1 +1,38 @@
-<p>candidate-info works!</p>
+<div class="container">
+  <div class="row">
+    <div class="box">
+      <h3>Welcome to Test Portal</h3>
+      <div>
+        <form [formGroup]="formGroup" (ngSubmit)="submitForm()">
+          <div class="inputController">
+            <label for="name">Name</label>
+            <input
+              type="text"
+              id="name"
+              placeholder="Name"
+              formControlName="name"
+              required
+            />
+          </div>
+          <div class="inputController">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              placeholder="Email"
+              formControlName="email"
+              required
+            />
+          </div>
+          <div class="inputController">
+            <div class="btnContainer inputController">
+              <button type="submit" >
+                Start Test
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
